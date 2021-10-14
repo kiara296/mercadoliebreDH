@@ -10,7 +10,6 @@ body {
   background-color: #ebebeb;
 }
 
-
 main {
   width: 90vw;
   margin: auto;
@@ -20,12 +19,18 @@ p {
   font-size: 12px;
 }
 
+/* Imagenes */
+
+img {
+  width: 100%;
+}
+
 /* Estilo texto titulo */
 body h3 {
   font-size: 24px;
   text-align: center;
   color: #666;
-  margin: 20px 0px
+  margin: 20px 0px;
 }
 
 /* Header */
@@ -35,14 +40,14 @@ header {
 
 /* TOP header: Logo + search bar + subtitlo */
 
-div.headerTop{
+div.headerTop {
   display: flex;
   flex-wrap: wrap;
   padding: 5%;
 }
 
 /* Estilo "Compra en cuotas... */
-.headerTop p{
+.headerTop p {
   width: 100%;
   text-align: center;
   margin-top: 10px;
@@ -51,22 +56,21 @@ div.headerTop{
 
 /* ancho logo y search bar */
 header div.logo,
-header .form{
-    width: 50%;
+header .form {
+  width: 50%;
 }
 
 /* Logo */
-header div.logo{
-    padding: 10px;
+header div.logo {
+  padding: 10px;
 }
 
 /* Search bar */
-header .form{
-    display: flex;
-    align-items: center;
-    padding: 2px;
-    font-size: 11px;
-   
+header .form {
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  font-size: 11px;
 }
 
 /* Input searchbar */
@@ -76,10 +80,9 @@ header .form .input {
   border: 1px solid rgb(131, 128, 128);
   border-right: none;
   width: 80%;
-  background: #fff; 
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%)
+  background: #fff;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
 }
-
 
 /* Serach bar: boton lupa */
 
@@ -90,9 +93,8 @@ header .form .submit {
   color: #666;
   border: 1px solid rgb(131, 128, 128);
   border-left: none;
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%)
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
 }
-
 
 /* Nav */
 
@@ -116,22 +118,20 @@ header li a {
 
 /* Hamburger */
 
-
 .hambMenu {
   text-align: center;
 }
 
-.hambMenu i{
-  background-color: #0044AA;
+.hambMenu i {
+  background-color: #0044aa;
   border-radius: 5px;
-  color: #FFF;
+  color: #fff;
   font-size: 20px;
   height: 40px;
   margin: 10px 0px 20px 0px;
   padding: 10px;
   width: 40px;
 }
-
 
 /* Section */
 
@@ -140,10 +140,9 @@ main section {
   flex-wrap: wrap;
 }
 
-
 /* Articulos */
 main section article {
-  background-color: #fff; 
+  background-color: #fff;
   margin: 10px 0px;
   box-shadow: 0px 0px 0px white;
   transition: box-shadow 0.5s ease-in-out;
@@ -157,17 +156,10 @@ article:hover .descripcion {
   display: initial;
 }
 
-/* Imagenes */
-
-img {
-  width: 100%;
-}
-
 
 /* Descripcion aritculos */
 
-
-article div.descripcionAritculo{
+article div.descripcionAritculo {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -185,10 +177,9 @@ article div.descripcionAritculo{
 
 .descripcion,
 .descuento {
- font-size: 16px;
- font-weight: normal;
+  font-size: 16px;
+  font-weight: normal;
 }
-
 
 .descuento {
   color: #39b54a;
@@ -214,7 +205,7 @@ main section article i {
   width: 30px;
   height: 30px;
   border: 1px solid #39b54a;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 50%;
   position: absolute;
   right: 20px;
@@ -228,15 +219,22 @@ main section article i:hover {
 
 /* Formulario */
 
+
+.formularioDatos input {
+  margin-top: 5px;
+}
+
 .campoForm {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 5px;
+  padding: 5px;
+  width: 50%;
 }
 
 .categoriasInteres {
   display: flex;
-  
 }
 
 /* Footer */
@@ -249,7 +247,8 @@ footer {
   flex-direction: column;
 }
 
-footer p, h4 {
+footer p,
+h4 {
   font-size: 12px;
 }
 
@@ -265,22 +264,44 @@ footer p, h4 {
 }
 
 
-/* formulario  */
-.botonEnviar {
-  background-color: #bcc0d3;
-  transition: all 1s;
+.tituloDatos {
+  text-align: start;
+  padding: 5px; 
+  margin: 5px;
 }
 
-.botonEnviar:hover {
+
+.botonEnviar,
+.botonBorrar {
+  background-color: #bcc0d3;
+  transition: all 1s;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+.botonEnviar:hover
+{
   background-color: #0022aa;
   color: #fff;
 }
+
+.botonBorrar {
+  background-color:#8faf97 ;
+}
+
+.botonBorrar:hover 
+{
+  background-color: #1c4426;
+  color: #fff;
+}
+
+
 
 /* Media queries */
 
 /* Tablet: 361 - 769*/
 @media (min-width: 361px) {
-  
   header .form {
     width: 35%;
   }
@@ -288,26 +309,31 @@ footer p, h4 {
   header .logo img {
     width: 70%;
   }
-
-  .descripcion {
-    display: block;
+  
+  div.headerTop {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 2%;
   }
 
-
+  .headerTop p {
+    width: auto;
+  }
+  
   nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  nav ul {  
+  nav ul {
     padding: 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  
   nav ul li {
     padding: 5px;
   }
@@ -316,7 +342,7 @@ footer p, h4 {
     display: none;
   }
 
-  main section div.tarjetasProducto{
+  main section div.tarjetasProducto {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -324,53 +350,45 @@ footer p, h4 {
     align-items: flex-start;
   }
 
-  main section div.tarjetasProducto article{
-  width: 45%;
+  main section div.tarjetasProducto article {
+    width: 45%;
   }
 
-  div.headerTop{
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  padding: 2%;
+  .descripcion {
+    display: block;
   }
-
-  .headerTop p {
-  width: auto;
-  }
-
+  
 }
 
 /* Desktop: 769 - infinito */
 @media (min-width: 769px) {
-  main section div.tarjetasProducto article{
+  main section div.tarjetasProducto article {
     width: 22%;
   }
   footer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   footer .seccionFooter {
-  width: 25%;
+    width: 25%;
   }
 
   nav {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
   }
 
- 
   nav ul {
-  padding: 5px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
- 
+
   nav ul li {
-  padding: 10px;
+    padding: 10px;
   }
 }

@@ -15,7 +15,7 @@
         <header>
             <div class="headerTop">
                 <div class="logo">
-                    <img src="/img/logo-mercado-liebre.svg" alt="Logo Mercado Liebre">
+                   <a href="/"><img src="/img/logo-mercado-liebre.svg" alt="Logo Mercado Liebre"></a> 
                 </div>
                 <form class="form" action="#" method="GET">
                     <input class="input" type="text" name="buscar" max-length="150" placeholder="Buscar productos, marcas y más">
@@ -44,12 +44,16 @@
             <img src="/img/img-home-banner.jpg" alt="Home Banner">
         </section>
         <main>
-            <h3>Completá tus datos</h3>
-            <form action="/resultadoRegister" method="POST">
+            <h3 class="tituloDatos">Completá tus datos</h3>
+            <form  class="formularioDatos" action="/resultadoRegister" method="POST">
                 <!-- nombre completo -->
                 <div class="campoForm">
-                    <label for="nombreCompleto">Nombre completo</label>
-                    <input type="text" name="nombreCompleto" id="nombreCompleto" placeholder=""  required minlength="10">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombreCompleto" id="nombre"  required minlength="10">
+                </div>
+                <div class="campoForm">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="nombreCompleto" id="apellido"  required minlength="10">
                 </div>
                 <!-- nombre usuario -->
                 <div class="campoForm">
@@ -115,7 +119,7 @@
                 <!-- boton enviar -->
                 <button class="botonEnviar" type="submit">Enviar</button> 
                 <!-- boton borrar datos -->
-                <button type="reset">Borrar</button> 
+                <button class="botonBorrar"  type="reset">Borrar</button> 
             </form>
         </main>
         <footer>
