@@ -43,7 +43,7 @@
         <section>
             <img src="/img/img-home-banner.jpg" alt="Home Banner">
         </section>
-        <main>
+        <main class="mainForm">
             <h3 class="tituloDatos">Completá tus datos</h3>
             <form  class="formularioDatos" action="/resultadoRegister" method="POST">
                 <!-- nombre completo -->
@@ -71,7 +71,7 @@
                     <input type="text" id="domicilio" name="domicilio">
                 </div>
                 <!-- perfil del usuario -->
-                <div class="campoForm">
+                <div class="campoForm perfil">
                     <p>Perfil del usuario:<p>
                     <input type="radio" name="perfil" id="comprar" value="comprar">
                     <label for="comprar">Comprar</label>
@@ -81,25 +81,25 @@
                 <!-- categorias de interes -->
                 <div class="campoForm categoriasInteres">
                     <p>Categorías de Interes</p>
-                    <div>
-                        <input id="electro" type="checkbox" name="categorias" value="electro">
-                        <label for="electro"> Electro</label>
+                     <div>
+                        <input type="checkbox" name="interests" value="a" id="a">
+                        <label for="a">Electro</label>
                     </div>
                     <div>
-                        <input id="moda" type="checkbox" name="categorias" value="moda">
-                        <label for="moda"> Moda</label>
+                        <input type="checkbox" name="interests" value="b" id="b">
+                        <label for="b">Moda</label>
                     </div>
                     <div>
-                        <input id="hogar" type="checkbox" name="categorias" value="hogar">
-                        <label for="hogar">Hogar</label>
+                        <input type="checkbox" name="interests" value="c" id="c">
+                        <label for="c">Hogar</label>
                     </div>
                     <div>
-                        <input id="jugeteria" type="checkbox" name="categorias" value="jugeteria">
-                        <label for="jugeteria">Jugetería</label>
+                        <input type="checkbox" name="interests" value="d" id="d">
+                        <label for="d">Juguetería</label>
                     </div>
                     <div>
-                        <input id="vidaSana" type="checkbox" name="categorias" value="vidaSana">
-                        <label for="vidaSana">Vida sana</label>
+                        <input type="checkbox" name="interests" value="e" id="e">
+                        <label for="e">Vida sana</label>
                     </div>
                 </div>
                 <!-- Foto de usuario -->

@@ -156,7 +156,6 @@ article:hover .descripcion {
   display: initial;
 }
 
-
 /* Descripcion aritculos */
 
 article div.descripcionAritculo {
@@ -219,9 +218,23 @@ main section article i:hover {
 
 /* Formulario */
 
+.mainForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formularioDatos {
+  display: flex;
+  flex-direction: column;
+}
 
 .formularioDatos input {
   margin-top: 5px;
+  width: 200%;
+}
+.campoForm label {
+  width: 200%;
 }
 
 .campoForm {
@@ -237,6 +250,10 @@ main section article i:hover {
   display: flex;
 }
 
+.categoriasInteres input,
+.perfil input {
+  width: auto;
+}
 /* Footer */
 
 footer {
@@ -263,13 +280,11 @@ h4 {
   margin: 20px 20px 40px 20px;
 }
 
-
 .tituloDatos {
   text-align: start;
-  padding: 5px; 
+  padding: 5px;
   margin: 5px;
 }
-
 
 .botonEnviar,
 .botonBorrar {
@@ -278,25 +293,23 @@ h4 {
   padding: 5px;
   border-radius: 5px;
   margin: 2px;
+  width: 30%;
+  align-self: center;
 }
 
-.botonEnviar:hover
-{
+.botonEnviar:hover {
   background-color: #0022aa;
   color: #fff;
 }
 
 .botonBorrar {
-  background-color:#8faf97 ;
+  background-color: #8faf97;
 }
 
-.botonBorrar:hover 
-{
+.botonBorrar:hover {
   background-color: #1c4426;
   color: #fff;
 }
-
-
 
 /* Media queries */
 
@@ -309,7 +322,7 @@ h4 {
   header .logo img {
     width: 70%;
   }
-  
+
   div.headerTop {
     display: flex;
     flex-wrap: nowrap;
@@ -320,7 +333,7 @@ h4 {
   .headerTop p {
     width: auto;
   }
-  
+
   nav {
     display: flex;
     flex-wrap: wrap;
@@ -357,7 +370,6 @@ h4 {
   .descripcion {
     display: block;
   }
-  
 }
 
 /* Desktop: 769 - infinito */
